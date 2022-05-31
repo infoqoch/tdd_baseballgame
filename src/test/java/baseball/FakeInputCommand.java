@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class MemoryInputCommand implements InputCommand {
-    Queue<List<Integer>> queue = new LinkedList<>();
+public class FakeInputCommand implements InputCommand {
+    private final Queue<List<Integer>> queue = new LinkedList<>();
 
     @Override
     public List<Integer> next() {

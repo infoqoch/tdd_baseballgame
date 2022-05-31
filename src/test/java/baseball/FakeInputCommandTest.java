@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class MemoryInputCommandTest {
+class FakeInputCommandTest {
     @Test
     void test(){
-        MemoryInputCommand input = new MemoryInputCommand();
+        FakeInputCommand input = new FakeInputCommand();
         input.add(asList(1,2,3));
         input.add(asList(3,4,5));
         input.add(asList(6,7,9));
