@@ -13,6 +13,12 @@ public class BaseballGame {
     }
 
     public GameRecord play() {
-        return GameRecord.report(1, answer);
+        int inning = 0;
+        while(true){
+            ++inning;
+            final Score score = Score.calculate(answer, input.next());
+            if(score.isGameSet())
+                return GameRecord.report(inning, answer);
+        }
     }
 }

@@ -40,6 +40,10 @@ public class Score {
         return ball == 0 && strike == 0;
     }
 
+    public boolean isGameSet(){
+        return strike==3;
+    }
+
     public int strike() {
         return strike;
     }
