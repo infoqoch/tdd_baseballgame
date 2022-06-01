@@ -12,6 +12,11 @@ public class BaseballGame {
         this.answer = new ArrayList(this.input.next());
     }
 
+    public BaseballGame(FakeInputCommand input, List<Integer> answer) {
+        this.input = input;
+        this.answer = new ArrayList(answer);
+    }
+
     public GameRecord play() {
         int inning = 0;
         while(true){

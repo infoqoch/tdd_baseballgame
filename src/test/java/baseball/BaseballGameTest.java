@@ -19,6 +19,22 @@ public class BaseballGameTest {
     }
 
     @Test
+    @DisplayName("초기화 때 answer를 삽입한다.")
+    void set_answer_when_init(){
+        // given
+        input.add(asList(1,2,3)); // 첫 번째 이닝
+
+        BaseballGame game = new BaseballGame(input, asList(1,2,3)); // 초기화 때 정답을 삽입한다.
+
+        // when
+        GameRecord gameRecord = game.play();
+
+        // then
+        assertThat(gameRecord.answer()).containsExactlyElementsOf(asList(1,2,3));
+        assertThat(gameRecord.lastInning()).isEqualTo(1);
+    }
+
+    @Test
     @DisplayName("1이닝 게임 종료")
     void game_set_first_inning(){
         // given
